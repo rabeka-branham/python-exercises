@@ -91,22 +91,20 @@ def remove_vowels(user_input):
 
 
 # 10. 
-# import string
+import string
 
-# def normalize_name(name):
-#     special_chars = string.punctuation
-#     if name[0].isdigit():
-#         name = name.replace(name[0])
-#     else:
-#         continue
-#     for char in name:
-#         if char.isdigit():
-#             name = name.replace(name[0],'')
-#         elif char in special_chars:
-#             name = name.replace(char, '')
-#         else:
-#             continue
-#     return name.lower().strip().replace(' ','_')
+def normalize_name(name):
+    special_chars = string.punctuation
+    new_name = ''
+    for char in name:
+        if char in special_chars:
+            continue
+        if char.isdigit():
+            continue
+        else:
+            new_name += char
+    new_name = new_name.lower().strip().replace(' ','_')
+    return print(new_name)
 
 
 
